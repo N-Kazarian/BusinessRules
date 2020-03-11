@@ -4,7 +4,7 @@
 	
 	Each file contains a unique API call which will update the MyLA311 system as they are updated on ServiceNow.
 	
-	Collaborators on this project are the following:
+	Collaborators on this project:
 	
 		- Narek Zamanyan
 		- Andrew Gonzalez
