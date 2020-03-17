@@ -24,8 +24,13 @@
 		+  '  "CreatedByUserLogin": "STREETSLAINTEGRATION",'
 		+  '  "UpdatedUserLogin": "STREETSLAINTEGRATION",'
 		+  '  "Source": "Driver Self Report",'
+<<<<<<< HEAD
       	+  '  "Owner": "BSS",'
         +  '  "CreatedByUserOrganization": "Proactive Insert,"'
+=======
+      	        +  '  "Owner": "BSS",'
+                +  '  "CreatedByUserOrganization": "Proactive Insert,"'
+>>>>>>> e79679aa2cb505f45b282f015f8a4aafb7f80a66
 		+  '  "Status": "Open",'
 		+  '  "ReasonCode": "NF", '
 		+  '  "ServiceDate": "01/08/2020 22:43:00", ' 
@@ -38,7 +43,7 @@
 		+  '          "ContactDate": "01/08/2020 22:43:00",'
 		+  '          "Crew": "Blue",'
 		+  '          "InspectedBy": "Narek",'
-	    +  '          "InspectionDate": "01/08/2020 22:43:00",'
+	        +  '          "InspectionDate": "01/08/2020 22:43:00",'
 		+  '          "CompletedBy": "Ross",'
 		+  '          "Type": "Non-Compliant Vending", '
 		+  '          "LastUpdatedBy": "STREETSLAINTEGRATION" '
@@ -48,4 +53,10 @@
 	
 	request.setRequestBody(Body);
 	
+<<<<<<< HEAD
 	request.execute();
+=======
+	request.execute();
+
+})(current, previous);
+>>>>>>> e79679aa2cb505f45b282f015f8a4aafb7f80a66
