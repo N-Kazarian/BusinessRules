@@ -50,5 +50,4 @@
 	
 	request.setRequestBody(Body);
 	
-<<<<<<< HEAD
 	request.execute();
