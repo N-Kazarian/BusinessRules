@@ -1,7 +1,7 @@
 (function executeRule(current, previous /*null when async*/) {
 	
 	//Creates "SRType" String to place in ListOfLa311 array
-	var StringSR = String(current.u_service_type);
+	var StringSR = current.u_service_type;
 	
 	var words = StringSR.split(" -");
 	
@@ -18,7 +18,7 @@
 	request.setRequestHeader("Content-Type", "Application/json");
 	
 	//Set Body
-	Body = ' {   "ServiceRequest": "STREETSLAINTEGRATION",' 
+	Body = ' {   "ServiceRequest": {,' 
 		+  '  "AddressVerified": "P",'
 		+  '  "SRType": "' + current.u_service_type + '",'
 		+  '  "IntegrationID": "' + SRType + '",'
@@ -26,7 +26,7 @@
 		+  '  "UpdatedUserLogin": "STREETSLAINTEGRATION",'
 		+  '  "Source": "Driver Self Report",'
         +  '  "Owner": "BSS",'
-        +  '  "CreatedByUserOrganization": "Proactive Insert"'
+        +  '  "CreatedByUserOrganization": "Proactive Insert,"'
 		+  '  "Status": "Open",'
 		+  '  "ReasonCode": "' + current.u_reason_code + '", '
 		+  '  "ServiceDate": "' + current.u_service_date + '", ' 
@@ -42,7 +42,7 @@
 	    +  '          "InspectionDate": "01/08/2020 22:43:00",'
 		+  '          "CompletedBy": "Ross",'
 		+  '          "Type": "' + SRType + '", '
-		+  '          "LastUpdatedBy": "' + current.u_last_updated_by + '", '
+		+  '          "LastUpdatedBy": "' + current.u_last_updated_by + '" '
 		+  '}]'  
         +  '}'
 		+  '}}';
