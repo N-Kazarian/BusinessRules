@@ -25,8 +25,8 @@
 		+  '  "CreatedByUserLogin": "STREETSLAINTEGRATION",'
 		+  '  "UpdatedUserLogin": "STREETSLAINTEGRATION",'
 		+  '  "Source": "Driver Self Report",'
-        +  '  "Owner": "BSS",'
-        +  '  "CreatedByUserOrganization": "Proactive Insert,"'
+      	        +  '  "Owner": "BSS",'
+                +  '  "CreatedByUserOrganization": "Proactive Insert,"'
 		+  '  "Status": "Open",'
 		+  '  "ReasonCode": "' + current.u_reason_code + '", '
 		+  '  "ServiceDate": "' + current.u_service_date + '", ' 
@@ -39,12 +39,12 @@
 		+  '          "ContactDate": "01/08/2020 22:43:00",'
 		+  '          "Crew": "' + current.u_crew + '",'
 		+  '          "InspectedBy": "Narek",'
-	    +  '          "InspectionDate": "01/08/2020 22:43:00",'
+	        +  '          "InspectionDate": "01/08/2020 22:43:00",'
 		+  '          "CompletedBy": "Ross",'
 		+  '          "Type": "' + SRType + '", '
 		+  '          "LastUpdatedBy": "' + current.u_last_updated_by + '" '
 		+  '}]'  
-        +  '}'
+                +  '}'
 		+  '}}';
 	
 	request.setRequestBody(Body);
