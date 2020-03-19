@@ -11,8 +11,8 @@
 	//Creates RESTMessageV2
 	var request = new sn_ws.RESTMessageV2('x_colac_streets_la.GetMyLA311Tickets', 'Default Post');
 
-	request.setEndpoint(LAEndpoint);
-
+	request.setEndpoint(LAendpoint);
+	request.setLogLevel('all');
 	//Set Body
 	var Body = " { "  
 		+  "  \"ServiceRequest\": {" 
@@ -22,8 +22,8 @@
 		+  "  \"CreatedByUserLogin\": \"STREETSLAINTEGRATION\","
 		+  "  \"UpdatedByUserLogin\": \"STREETSLAINTEGRATION\","
 		+  "  \"Source\": \"Driver Self Report\","
-      		+  "  \"Owner\": \"BSS\","
-        	+  "  \"CreatedByUserOrganization\": \"Proactive Insert\","
+      	+  "  \"Owner\": \"BSS\","
+        +  "  \"CreatedByUserOrganization\": \"Proactive Insert\","
 		+  "  \"Status\": \"Open\","
 		+  "  \"ReasonCode\": \"NF\", "
 		+  "  \"ServiceDate\": \"01/08/2020 22:43:00\", " 
@@ -35,7 +35,7 @@
 		+  "          \"ContactDate\": \"01/08/2020 22:43:00\","
 		+  "          \"Crew\": \"Blue\","
 		+  "          \"InspectedBy\": \"Narek\","
-	  	+  "          \"InspectionDate\": \"01/08/2020 22:43:00\","
+	    +  "          \"InspectionDate\": \"01/08/2020 22:43:00\","
 		+  "          \"Type\": \"Weed Abatement\","
 		+  "          \"LastUpdatedBy\": \"STREETSLAINTEGRATION\" "
 		+  "}]}}}";
