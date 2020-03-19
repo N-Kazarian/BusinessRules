@@ -14,31 +14,36 @@
 	request.setEndpoint(LAEndpoint);
 
 	//Set Body
-	var Body = ' {   "ServiceRequest": {' 
-		+  '  "AddressVerified": "P",'
-		+  '  "SRType": "Weed Abatement for Pvt Parcelst",'
-		+  '  "IntegrationId": "BSS-APro2",'
-		+  '  "CreatedByUserLogin": "STREETSLAINTEGRATION",'
-		+  '  "UpdatedByUserLogin": "STREETSLAINTEGRATION",'
-		+  '  "Source": "Driver Self Report",'
-      		+  '  "Owner": "BSS",'
-        	+  '  "CreatedByUserOrganization": "Proactive Insert",'
-		+  '  "Status": "Open",'
-		+  '  "ReasonCode": "NF", '
-		+  '  "ServiceDate": "01/08/2020 22:43:00", ' 
-		+  '  "SRAddress": "123 Test Street, 91402", '
-		+  '  "ListOfLa311WeedAbatementForPrivateParcels": { '
-		+  '     "La311WeedAbatementForPrivateParcels": [{ '
-		+  '          "AssignedTo": "Nerses",'
-		+  '          "Contact": "",'
-		+  '          "ContactDate": "01/08/2020 22:43:00",'
-		+  '          "Crew": "Blue",'
-		+  '          "InspectedBy": "Narek",'
-	   	+  '          "InspectionDate": "01/08/2020 22:43:00",'
-		+  '          "Type": "Weed Abatement",'
-		+  '          "LastUpdatedBy": "STREETSLAINTEGRATION" '
-		+  '}]}}}';
+	var Body = " { "  
+		+  "  \"ServiceRequest\": {" 
+		+  "  \"AddressVerified\": \"P\","
+		+  "  \"SRType\": \"Weed Abatement for Pvt Parcels\","
+		+  "  \"IntegrationId\": \"BSS-Pro10Name\","
+		+  "  \"CreatedByUserLogin\": \"STREETSLAINTEGRATION\","
+		+  "  \"UpdatedByUserLogin\": \"STREETSLAINTEGRATION\","
+		+  "  \"Source\": \"Driver Self Report\","
+      		+  "  \"Owner\": \"BSS\","
+        	+  "  \"CreatedByUserOrganization\": \"Proactive Insert\","
+		+  "  \"Status\": \"Open\","
+		+  "  \"ReasonCode\": \"NF\", "
+		+  "  \"ServiceDate\": \"01/08/2020 22:43:00\", " 
+		+  "  \"SRAddress\": \"123 Test Street, 91402\", "
+		+  "  \"ListOfLa311WeedAbatementForPrivateParcels\": { "
+		+  "  \"La311WeedAbatementForPrivateParcels\": [{ "
+		+  "  \"AssignedTo\": \"Nerses\","
+		+  "          \"Contact\": \"\", "
+		+  "          \"ContactDate\": \"01/08/2020 22:43:00\","
+		+  "          \"Crew\": \"Blue\","
+		+  "          \"InspectedBy\": \"Narek\","
+	  	+  "          \"InspectionDate\": \"01/08/2020 22:43:00\","
+		+  "          \"Type\": \"Weed Abatement\","
+		+  "          \"LastUpdatedBy\": \"STREETSLAINTEGRATION\" "
+		+  "}]}}}";
 	
 	request.setRequestBody(Body);
 	
 	request.execute();
+
+	var responseBody = response.getBody();
+	var httpStatus = response.getStatusCode();
+	var responseObj = JSON.parse(responseBody);
